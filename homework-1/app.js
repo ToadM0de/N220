@@ -10,14 +10,16 @@ document.getElementById("bank").innerHTML +=
   " After purchasing the outfit, my bank account balance is $" + banks;
 document.getElementById("addJacket").innerHTML += " Add jacket: " + !70;
 
-let kid = 4;
-kid *= 8;
-kid /= 2.5;
-document.getElementById("kidPizza").innerHTML += "Students: " + kid;
-let prof = 4;
-prof *= 8;
-prof /= 12.8;
-document.getElementById("profPizza").innerHTML += "Rector: " + prof;
+const totalPizzas = 4;
+const slicesPerPizza = 8;
+const slicesThatStudentCanEat = 2.5;
+const totalSlices = totalPizzas * slicesPerPizza;
+// 1 pizza; feed 3 students with .5 left for Rector
+const pizzaLeftOver = (totalPizzas * slicesPerPizza) % slicesThatStudentCanEat;
+console.log("Teacher Left With", pizzaLeftOver);
+const studentsFedWithPizza =
+  (totalSlices - pizzaLeftOver) / slicesThatStudentCanEat;
+console.log("Students Fed", studentsFedWithPizza);
 
 let receipt = 12;
 receipt *= 2;
