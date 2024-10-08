@@ -1,12 +1,4 @@
-let todoItems = [];
-
-function addItem() {
-  if (document.getElementById("item").value !== "") {
-    todoItems[todoItems.length] = document.getElementById("item").value;
-    document.getElementById("item").value = "";
-  }
-  const currentList = todoItems.list.length;
-}
+const todoItems = [];
 
 function updateList() {
   document.getElementById("list").innerHTML = "";
@@ -22,8 +14,10 @@ function summarizeList() {
   const lastItem = totalItems > 0 ? todoItems[totalItems - 1] : "None";
 
   summaryElement.innerHTML = `
-        Total Items: ${totalItems}<br />
-        First Item: ${firstItem}<br />
+        Total Items: ${totalItems}
+        <br />
+        First Item: ${firstItem}
+        <br />
         Last Item: ${lastItem}
     `;
 }
