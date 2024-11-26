@@ -4,7 +4,7 @@ Animal Changer
 
 ### Github Link
 
-https://tstreets.github.io/N220/final-project
+https://toadm0de.github.io/N220/final-project/
 
 ### Major Features
 
